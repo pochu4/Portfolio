@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --beige: #E3DACF;
+  --gray: #353632;
+  --l-gray: #B6B5B1;
+  --orange: #D05723;
+  --elza: "elza", sans-serif;
+  --satoshi: 'Satoshi', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  background: #e3dacf;
+}
+
+/* Introductions */
+.intro {
+  padding: 1rem 2rem;
+}
+
+.intro_container {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro_titles {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.intro_titles-container {
+  width: 80%;
+}
+
+.intro_titles h2 {
+  border-bottom: 1px solid #353632;
+  font-family: var(--elza);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.intro_titles p {
+  font-family: var(--satoshi);
+  font-weight: 300;
+  font-size: 0.875rem;
+  padding-top: 0.5rem;
+  text-align: end;
+}
+
+.intro_content {
+  padding-top: 5rem;
+}
+
+.intro_content p {
+  font-family: var(--satoshi);
+  font-weight: 300;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+
+
+/* Counter */
+/* .overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  pointer-events: none;
+} */
+
+/* .bar {
+  width: 100vw;
+  height: 105vh;
+  background: #3A3D36;
+  pointer-events: none;
+}
+
+.counter {
+  width: 100%;
+  height: 10%;
+  bottom: 1rem;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #bec0cb;
+  padding: 0.2em 0.4em;
+  font-size: 20vw;
+  font-family: var(--elza);
+  z-index: 10000;
+} */
+
+
+.highlight {
+  color: var(--orange);
+}
+
+@media (min-width: 400px) {}
+
+@media (min-width: 768px) {
+  .intro {
+    padding: 1rem 4rem;
+  }
+  
+  .intro_titles-container {
+    width: 70%;
+  }
+  
+  .intro_titles h2 {
+    font-size: 1.5rem;
+  }
+  
+  .intro_content {
+    width: 70%;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro_container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  
+  .intro_titles h2 {
+    border-bottom: 1px solid #353632;
+    font-family: var(--elza);
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  .intro_titles p {
+    font-family: var(--satoshi);
+    font-weight: 300;
+    font-size: 1rem;
+    padding-top: 1rem;
+    text-align: end;
+  }
+  
+  .intro_content {
+    padding-top: 0;
+
+  }
+  
+  .intro_content p {
+    font-size: 1.25rem;
+    width: 90%;
+    padding-top: 0.5rem;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 1280px) {}
+
+/* @media (min-width: 400px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1280px) {} */

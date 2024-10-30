@@ -1,0 +1,134 @@
+* {
+    --beige: #E3DACF;
+    --gray: #353632;
+    --l-gray: #B6B5B1;
+    --orange: #D05723;
+    --elza: "elza", sans-serif;
+    --satoshi: 'Satoshi', sans-serif;
+}
+
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    padding-top: 4rem;
+    margin: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-marquee{}
+
+.hero-container {}
+
+.hero-introduction_name {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem;
+}
+
+.hero-introduction h1 {
+    font-size: 3.5rem;
+    font-family: var(--elza);
+    font-weight: 500;
+    grid-column: 1 / span 4;
+}
+
+.hero-introduction_bio {
+    gap: 0.25rem;
+}
+
+.hero-introduction p {
+    grid-column: 1 / span 3;
+    font-size: 1rem;
+    font-family: var(--elza);
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 400px) {}
+
+@media (min-width: 768px) {
+    .hero {
+        margin: 0 4rem;
+        text-align: end;
+    }
+
+    .hero-introduction_name {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .hero-introduction_name h1 {
+        grid-column: 4 / span 9;
+    }
+
+    .hero-introduction_bio {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .hero-introduction_bio p {
+        grid-column: 6 / span 7;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        margin: 0 4rem;
+    }
+
+    .hero-introduction_name h1 {
+        grid-column: 4 / span 9;
+        font-size: 7rem;
+    }
+
+    .hero-introduction_bio p {
+        grid-column: 5 / span 8;
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero {
+        margin: 0 5rem;
+    }
+
+    .hero-introduction_name h1 {
+        grid-column: 6 / span 7;
+        font-size: 7rem;
+    }
+
+    .hero-introduction_bio p {
+        grid-column: 7 / span 6;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+}
+
+/* @media (min-width: 1600px) {
+    .hero-introduction_name h1 {
+        font-size: 10rem;
+    }
+    .hero-introduction_bio p {
+        grid-column: 8 / span 5;
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+} */
+
+@media (min-width: 1800px) {
+    .hero-introduction_name h1 {
+        grid-column: 6 / span 7;
+        font-size: 10rem;
+    }
+}
