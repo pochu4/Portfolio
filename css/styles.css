@@ -20,18 +20,21 @@ h1 {
   font-family: var(--elza);
   font-weight: 500;
   font-size: 2.5rem;
+  color: var(--gray);
 }
 
 h3 {
   font-family: var(--elza);
   font-weight: 400;
   font-size: 1.5rem;
+  color: var(--gray);
 }
 
 p {
   font-family: var(--satoshi);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.125rem;
+  color: var(--gray);
 }
 
 
