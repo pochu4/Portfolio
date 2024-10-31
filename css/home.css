@@ -30,7 +30,7 @@
 }
 
 .hero-introduction h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: var(--elza);
     font-weight: 500;
     grid-column: 1 / span 4;
