@@ -127,6 +127,10 @@
 } */
 
 @media (min-width: 1800px) {
+    .hero {
+        max-width: 80%;
+        margin: 0 auto;
+    }
     .hero-introduction_name h1 {
         grid-column: 6 / span 7;
         font-size: 10rem;
