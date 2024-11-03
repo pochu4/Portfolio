@@ -12,16 +12,38 @@
 .hero {
     height: 100vh;
     padding-top: 4rem;
-    margin: 0 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.hero-marquee{}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+}
 
-.hero-container {}
+.marquee__inner {
+    display: inline-flex;
+    position: relative;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.marquee__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.marquee__item img {
+    width: 100%;
+    height: auto;
+    padding: 0 0.5rem;
+}
+
+.hero-container {
+    margin: 0 1.25rem;
+}
 
 .hero-introduction_name {
     display: grid;
@@ -59,8 +81,11 @@
 
 @media (min-width: 768px) {
     .hero {
-        margin: 0 4rem;
+        
         text-align: end;
+    }
+    .hero-container {
+        margin: 0 4rem;
     }
 
     .hero-introduction_name {
@@ -83,9 +108,6 @@
 }
 
 @media (min-width: 1024px) {
-    .hero {
-        margin: 0 4rem;
-    }
 
     .hero-introduction_name h1 {
         grid-column: 4 / span 9;
@@ -99,7 +121,7 @@
 }
 
 @media (min-width: 1280px) {
-    .hero {
+    .hero-container {
         margin: 0 5rem;
     }
 
@@ -131,6 +153,7 @@
         max-width: 80%;
         margin: 0 auto;
     }
+
     .hero-introduction_name h1 {
         grid-column: 6 / span 7;
         font-size: 10rem;
