@@ -1,7 +1,9 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const loop = horizontalLoop(".marquee__item", {
     repeat: -1,
     paused: false,
-    speed: 1
+    speed: 2
 });
 
 function horizontalLoop(items, config) {
