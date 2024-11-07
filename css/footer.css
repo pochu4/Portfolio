@@ -1,10 +1,22 @@
+@font-face {
+  font-family: 'Geist'; 
+  src: url('./fonts/Geist-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Geist Light';
+  src: url('./fonts/Geist-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
 :root {
   --beige: #E3DACF;
   --gray: #353632;
   --l-gray: #B6B5B1;
   --orange: #D05723;
-  --elza: "elza", sans-serif;
-  --satoshi: 'Satoshi', sans-serif;
+  --geist: 'Geist', sans-serif;
+  --geistLight: 'Geist Light', sans-serif;
 }
 
 
@@ -119,7 +131,7 @@ footer {
 .footer-socials {
   color: var(--beige);
   font-size: 1rem;
-  font-family: var(--satoshi);
+  font-family: var(--geistLight);
   text-decoration: none;
   position: relative;
   transition: all 0.2s;
@@ -196,7 +208,6 @@ footer {
 }
 
 .footer-notes p {
-  font-family: var(--satoshi);
   color: var(--beige);
   font-weight: 300;
   font-size: 0.75rem;
