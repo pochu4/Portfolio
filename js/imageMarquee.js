@@ -1,109 +1,148 @@
-gsap.registerPlugin(ScrollTrigger);
+class InfiniteSlider {
+    constructor(animTime = '10000', selector = '.slider', container = '#hero-marquee') {
+        this.slider = document.querySelector(selector)
+        this.container = document.querySelector(container)
+        this.width = 0
+        this.oldWidth = 0
+        this.duration = parseInt(animTime)
+        this.start = 0
+        this.refresh = 0 //0, 1, or 2, as in steps of the animation
+        this._prevStop = false
+        this._stop = false
+        this._oldTimestamp = 0
+    }
 
-const loop = horizontalLoop(".marquee__item", {
-    repeat: -1,
-    paused: false,
-    speed: 2
-});
+    animate() {
+        /* fix for browsers who like to run JS before images are loaded */
+        const imgs = Array.prototype.slice.call(this.slider.querySelectorAll('img'))
+            .filter(img => {
+                return img.naturalWidth === 0
+            })
+        if (imgs.length > 0) {
+            window.requestAnimationFrame(this.animate.bind(this));
+            return
+        }
 
-function horizontalLoop(items, config) {
-    items = gsap.utils.toArray(items);
-    config = config || {};
-    let tl = gsap.timeline({
-        repeat: config.repeat,
-        paused: config.paused,
-        defaults: { ease: "none" },
-        onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
-    }),
-        length = items.length,
-        startX = items[0].offsetLeft,
-        times = [],
-        widths = [],
-        xPercents = [],
-        curIndex = 0,
-        pixelsPerSecond = (config.speed || 1) * 50,
-        snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
-        totalWidth,
-        curX,
-        distanceToStart,
-        distanceToLoop,
-        item,
-        i;
-    gsap.set(items, {
-        // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
-        xPercent: (i, el) => {
-            let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
-            xPercents[i] = snap(
-                (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
-                gsap.getProperty(el, "xPercent")
-            );
-            return xPercents[i];
+        /* Add another copy of the slideshow to the end, keep track of original width */
+        this.oldWidth = this.slider.offsetWidth
+        const sliderText = '<span class="slider-extra">' + this.slider.innerHTML + '</span>'
+        this.slider.innerHTML += sliderText
+
+        /* can have content still when we move past original slider */
+        this.width = this.slider.offsetWidth
+        const minWidth = 2 * screen.width
+
+        /* Add more slideshows if needed to keep a continuous stream of content */
+        while (this.width < minWidth) {
+            this.slider.innerHTML += sliderText
+            this.width = this.slider.width
         }
-    });
-    gsap.set(items, { x: 0 });
-    totalWidth =
-        items[length - 1].offsetLeft +
-        (xPercents[length - 1] / 100) * widths[length - 1] -
-        startX +
-        items[length - 1].offsetWidth *
-        gsap.getProperty(items[length - 1], "scaleX") +
-        (parseFloat(config.paddingRight) || 0);
-    for (i = 0; i < length; i++) {
-        item = items[i];
-        curX = (xPercents[i] / 100) * widths[i];
-        distanceToStart = item.offsetLeft + curX - startX;
-        distanceToLoop =
-            distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
-        tl.to(
-            item,
-            {
-                xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-                duration: distanceToLoop / pixelsPerSecond
-            },
-            0
-        )
-            .fromTo(
-                item,
-                {
-                    xPercent: snap(
-                        ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-                    )
-                },
-                {
-                    xPercent: xPercents[i],
-                    duration:
-                        (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
-                    immediateRender: false
-                },
-                distanceToLoop / pixelsPerSecond
-            )
-            .add("label" + i, distanceToStart / pixelsPerSecond);
-        times[i] = distanceToStart / pixelsPerSecond;
+        this.slider.querySelector('.slider-extra:last-child').classList.add('slider-last')
+
+        /* loop animation endlesssly (this is pretty cool) */
+        window.requestAnimationFrame(this.controlAnimation.bind(this))
     }
-    function toIndex(index, vars) {
-        vars = vars || {};
-        Math.abs(index - curIndex) > length / 2 &&
-            (index += index > curIndex ? -length : length); // always go in the shortest direction
-        let newIndex = gsap.utils.wrap(0, length, index),
-            time = times[newIndex];
-        if (time > tl.time() !== index > curIndex) {
-            // if we're wrapping the timeline's playhead, make the proper adjustments
-            vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
-            time += tl.duration() * (index > curIndex ? 1 : -1);
+
+    halt() {
+        this._stop = true
+        this._prevStop = false
+    }
+
+    go() {
+        this._stop = false
+        this._prevStop = true
+    }
+
+    stagnate() {
+        this.container.style.overflowX = "scroll"
+    }
+
+    controlAnimation(timestamp) {
+        //console.log('this.stop: ' + this._stop + '\nthis.prevStop: ' + this._prevStop)
+        if (this._stop === true) {
+            if (this._prevStop === false) {
+                this.slider.style.marginLeft = getComputedStyle(this.slider).marginLeft
+                this._prevStop = true
+                this._oldTimestamp = timestamp
+            }
+        } else if (this._stop === false && this._prevStop === true) {
+            this._prevStop = false
+            this.start = this.start + (timestamp - this._oldTimestamp)
+        } else {
+            //reset animation
+            if (this.refresh >= 1) {
+                this.start = timestamp
+                this.slider.style.marginLeft = 0
+                this.refresh = 0
+                window.requestAnimationFrame(this.controlAnimation.bind(this))
+                return
+            }
+            if (timestamp - this.start >= this.duration) {
+                this.refresh = 1
+            }
+
+            const perc = ((timestamp - (this.start)) / this.duration) * this.oldWidth
+            this.slider.style.marginLeft = (-perc) + 'px'
         }
-        curIndex = newIndex;
-        vars.overwrite = true;
-        return tl.tweenTo(time, vars);
+        window.requestAnimationFrame(this.controlAnimation.bind(this))
+        return
     }
-    tl.next = (vars) => toIndex(curIndex + 1, vars);
-    tl.previous = (vars) => toIndex(curIndex - 1, vars);
-    tl.current = () => curIndex;
-    tl.toIndex = (index, vars) => toIndex(index, vars);
-    tl.times = times;
-    tl.progress(1, true).progress(0, true); // pre-render for performance
-    if (config.reversed) {
-        tl.vars.onReverseComplete();
-        tl.reverse();
+
+    getIeWidth() {
+        this.slider.style.marginLeft = '-99999px';
     }
-    return tl;
+
+    ie11Fix() {
+        this.slider.querySelector('.slider-last').style.position = 'absolute';
+    }
 }
+
+function detectIE() {
+    var ua = window.navigator.userAgent
+    var msie = ua.indexOf('MSIE ')
+
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
+    }
+
+    var trident = ua.indexOf('Trident/')
+    if (trident > 0) {
+        // IE 11 => return version number
+        var rv = ua.indexOf('rv:')
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+        // Edge (IE 12+) => return version number
+        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10)
+    }
+
+    // other browser
+    return false
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = new InfiniteSlider(20000)
+    const ie = detectIE()
+
+    //Dont animate under IE10, just place the images
+    if (ie !== false && ie < 10) {
+        slider.stagnate()
+        return
+    }
+    //IE 11 and lower, fix for width *increasing* as more of the slider is shown
+    if (ie !== false && ie < 12) { slider.getIeWidth() }
+
+    slider.animate()
+    document.querySelector('#hero-marquee')
+        .addEventListener('mouseenter', slider.halt.bind(slider))
+    document.querySelector('#hero-marquee')
+        .addEventListener('mouseleave', slider.go.bind(slider))
+
+    if (ie === 11) {
+        setTimeout(slider.ie11Fix.bind(slider), 1000)
+    }
+});
