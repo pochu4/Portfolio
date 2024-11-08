@@ -96,12 +96,74 @@
 .hero-content_bio p {
     font-family: var(--geistLight);
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--gray);
     text-align: justify;
 }
 
 
+.featured-projects {
+    margin: 0 1rem;
+}
+.featured-projects_title {
+    margin-bottom: 2rem;
+}
+.featured-projects_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.featured-project1 {
+    margin-bottom: 1rem;
+}
+
+.featured-project1, .featured-project2 {
+    margin-bottom: 2.5rem;
+    img {
+        margin-bottom: 0.5rem;
+    };
+}
+.project-date {
+    font-size: 1rem;
+    font-family: var(--geistLight);
+}
+
+.project-name_role {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-name_role p {
+    color: var(--orange);
+}
+
+.project-description {
+    border-top: 1.5px dashed var(--gray);
+    border-bottom: 1.5px dashed var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-project1 img, .featured-project2 img{
+    filter: saturate(0);
+}
+
+.featured-project1:hover img, .featured-project2:hover img { filter: saturate(1); /* Increase saturation of the image on hover */ }
+
+.featured-projects_cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.featured-projects_cta a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--gray);
+    font-family: var(--geistLight);
+}
 
 @media (min-width: 400px) {}
 
@@ -126,6 +188,9 @@
         width: 70%;
         font-size: 1.5rem;
     }
+    .featured-projects {
+        margin: 0 4rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -142,6 +207,15 @@
     .hero-content_bio p {
         width: 45%;
         font-size: 1.25rem;
+    }
+    .featured-projects {
+        margin: 0 5rem;
+    }
+    .featured-project1 {
+        max-width: 50%;
+    }
+    .featured-project2 {
+        max-width: 45%;
     }
 }
 
@@ -165,4 +239,8 @@
         width: 42.5%;
         font-size: 1.5rem;
     }
+   .featured-projects {
+    max-width: 80%;
+    margin: 0 auto;
+   }
 }

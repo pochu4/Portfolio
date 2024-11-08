@@ -35,6 +35,12 @@ h1 {
   color: var(--gray);
 }
 
+h2 {
+  font-family: var(--elza);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 h3 {
   font-family: var(--elza);
   font-weight: 400;

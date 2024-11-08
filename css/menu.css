@@ -123,7 +123,7 @@ header {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background: #c03f13;
+  background: var(--orange);
   width: 0%;
   height: 0.5rem;
 }
@@ -162,3 +162,9 @@ nav p:after {
 }
 
 @media (min-width: 1280px) {}
+
+@media (min-width: 1800px) {
+  header {
+    padding: 2rem 10rem;
+  }
+}
