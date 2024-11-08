@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johann Chua</title>
+
+    <!-- Reset Stylesheet -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Adobe Font - Elza -->
+    <link rel="stylesheet" href="https://use.typekit.net/nxl4qpa.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/projects.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <!-- <p><a href="#"><img src="images/Submark.svg" alt=""></a></p> -->
+            <a href="#"><img src="images/Submark.svg" alt=""></a>
+        </div>
+        <div class="toggle-btn">
+            <button class="burger" onclick="this.classList.toggle('active');"></button>
+        </div>
+    </header>
+
+    <!-- Full Screened Menu -->
+    <div class="overlay2">
+        <nav class="overlay-menu">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-item-name">
+                        <p><a href="index.html">Home</a></p>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <div class="menu-item-name">
+                        <p id="active"><a href="#">Works</a></p>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <div class="menu-item-name">
+                        <p><a href="about.html">About</a></p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+
+        <div class="projects-header" style="padding-top: 6rem;">
+            <h1>My <span class="h1-highlight">Works</span></h1>
+        </div>
+
+        <div class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ux-ui">UX/UI</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="front-end">Front-End</button>
+            <span class="underline"></span>
+        </div>
+        
+
+        <div class="featured-projects">
+
+
+            <div class="featured-projects_content">
+
+                <div class="featured-project1">
+                    <p class="project-date">07/04</p>
+                    <div class="project-name_role">
+                        <h2>ROAM</h2>
+                        <p>UX Strategy, UI Design</p>
+                    </div>
+                    <img src="./images/roam/roam-hero.png" alt="">
+                    <div class="project-description">
+                        <p>A Hiking Companion for Trail Seekers</p>
+                        <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="featured-project2">
+                    <p class="project-date">07/04</p>
+                    <div class="project-name_role">
+                        <h2>Virtus</h2>
+                        <p>UX Strategy, UI Design</p>
+                    </div>
+                    <img src="./images/virtus/virtus-hero.png" alt="">
+                    <div class="project-description">
+                        <p>Beyond the Gym Floor</p>
+                        <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="featured-project2">
+                    <p class="project-date">07/04</p>
+                    <div class="project-name_role">
+                        <h2>epure</h2>
+                        <p>UI Design, Graphic Design</p>
+                    </div>
+                    <img src="./images/epure/epure-hero.png" alt="">
+                    <div class="project-description">
+                        <p>Beyond the Gym Floor</p>
+                        <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="featured-project2">
+                    <p class="project-date">07/04</p>
+                    <div class="project-name_role">
+                        <h2>Macade</h2>
+                        <p>Branding</p>
+                    </div>
+                    <img src="./images/macade/macade-hero.png" alt="">
+                    <div class="project-description">
+                        <p>Beyond the Gym Floor</p>
+                        <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="component contact contact-border">
+
+            <div class="component-header">
+                <h1>Let's Work <span class="h1-highlight">Together</span></h1>
+            </div>
+
+            <div class="comp-container">
+
+                <div class="component-text">
+                    <p>For more information about my services, feel free to reach out. I’m always open to discussing new
+                        projects.
+                    </p>
+                </div>
+
+                <div class="component-subhead">
+                    <div class="component-subhead_container">
+                        <h3 style="font-weight: 500;">hello@johannchua.com</h3>
+                        <p>Or feel free to just say, Hi!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-container_logo">
+                <a href="#"><img src="images/primary.svg" alt=""></a>
+            </div>
+
+            <div class="footer-container_links">
+
+                <a class='footer-socials' href="https://www.linkedin.com/in/johann-chua/">
+                    <span class='footer-socials_arrow arrow-left'>
+                        <span class='footer-socials_arrow-shaft'></span>
+                    </span>
+                    <span class='main'>
+                        <span class='text'>LinkedIn</span>
+                        <span class='footer-socials_arrow arrow-right'>
+                            <span class='footer-socials_arrow-shaft'></span>
+                        </span>
+                    </span>
+                </a>
+
+                <a class='footer-socials' href="https://github.com/pochu4">
+                    <span class='footer-socials_arrow arrow-left'>
+                        <span class='footer-socials_arrow-shaft'></span>
+                    </span>
+                    <span class='main'>
+                        <span class='text'>GitHub</span>
+                        <span class='footer-socials_arrow arrow-right'>
+                            <span class='footer-socials_arrow-shaft'></span>
+                        </span>
+                    </span>
+                </a>
+
+                <a class='footer-socials' href="">
+                    <span class='footer-socials_arrow arrow-left'>
+                        <span class='footer-socials_arrow-shaft'></span>
+                    </span>
+                    <span class='main'>
+                        <span class='text'>Behance</span>
+                        <span class='footer-socials_arrow arrow-right'>
+                            <span class='footer-socials_arrow-shaft'></span>
+                        </span>
+                    </span>
+                </a>
+
+                <a class='footer-socials' href="https://www.are.na/po-chu/channels">
+                    <span class='footer-socials_arrow arrow-left'>
+                        <span class='footer-socials_arrow-shaft'></span>
+                    </span>
+                    <span class='main'>
+                        <span class='text'>Are.na</span>
+                        <span class='footer-socials_arrow arrow-right'>
+                            <span class='footer-socials_arrow-shaft'></span>
+                        </span>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-notes">
+            <p>2024 All Rights Reserved</p>
+            <p>Designed & Developed by Johann Chua</p>
+        </div>
+
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+
+    <!-- Ionic Icon Library -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Loading Screen Script -->
+    <!-- <script src="js/loader.js"></script> -->
+
+    <!-- Full Screened Menu Script using GSAP -->
+    <script src="js/fsmenu.js"></script>
+
+    <!-- Hero Section Marquee -->
+    <script src="js/imageMarquee.js"></script>
+
+</body>
+
+</html>
