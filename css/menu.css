@@ -168,7 +168,7 @@ nav p:after {
 
 @media (min-width: 1280px) {}
 
-@media (min-width: 1800px) {
+@media (min-width: 1920px) {
   header {
     padding: 2rem 10rem;
   }

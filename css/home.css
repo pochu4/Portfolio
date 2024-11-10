@@ -161,7 +161,13 @@
 .featured-projects_cta a {
     text-decoration: none;
     font-size: 1.25rem;
-    color: var(--gray);
+    color: var(--l-gray);
+    font-family: var(--geistLight);
+}
+.featured-projects_cta a:hover {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--orange);
     font-family: var(--geistLight);
 }
 
