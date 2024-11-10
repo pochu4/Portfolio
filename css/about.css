@@ -265,11 +265,15 @@ ion-icon {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.25rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
-
-
+.mini-cv_cta {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--beige);
+    padding-top: 2rem;
+}
 
 /* Media Queries */
 
@@ -302,7 +306,7 @@ ion-icon {
         font-size: 1.375rem;
     }
     .p-light {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     /*  */
@@ -313,6 +317,8 @@ ion-icon {
     .mini-cv_container {
         margin: 0 4rem;
     }
+
+
 }
 
 @media (min-width: 1024px) {
