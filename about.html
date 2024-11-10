@@ -26,7 +26,7 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="main-tool-bar">
         <div class="logo">
             <!-- <p><a href="#"><img src="images/Submark.svg" alt=""></a></p> -->
             <a href="#"><img src="images/Submark.svg" alt=""></a>
@@ -61,59 +61,44 @@
 
     <main>
 
+        <div class="about-header">
+            <h1>About <span class="h1-highlight">Me</span></h1>
+        </div>
+
         <div class="about-intro">
 
-            <div class="about-intro_header">
-                <!-- <img src="test.png" alt=""> -->
-                <div class="about-intro_header-img">
-                    <img src="./images/johann.jpg" alt="Johann Chua, Digital Designer">
-                </div>
-
-                <div class="about-intro_header-name">
-                    <h1 class="name-overlap">Johann S.</h1>
-                    <h1>Ong Chua</h1>
-                </div>
+            <div class="about-intro_image pin">
+                <img src="./images/johann2.jpg" alt="">
             </div>
 
-            <div class="component intro comp-intro ">
-
-                <div class="component-header">
-                    <!-- <h1>My <span class="h1-highlight">Goals</span></h1> -->
+            <div class="about-intro_content not-pin">
+                <div class="about-intro_content-1">
+                    <h2>Hello again, I’m Johann - A <span class="highlight">Digital Designer </span>based in Vancouver,
+                        BC.</h2>
+                    <p>Currently, a web development and media design student at BCIT who is passionate about the
+                        creative industry and tech. I constantly look to challenge myself with new experiences.</p>
                 </div>
 
-                <div class="comp-container">
 
-                    <div class="component-text">
-                        <p>I aim to keep pushing creative boundaries, stay true to my vision, and design work that’s not
-                            only
-                            visually
-                            appealing but also functional and impactful.
-                        </p>
-                    </div>
-
-                    <div class="component-subhead">
-                        <div class="component-subhead_container">
-                            <h3>Hello again,</h3>
-                            <p>I'm a digital designer based in Vancouver, BC</p>
-                        </div>
-                    </div>
-
-                </div>
+                <!-- <div class="about-intro_content-2">
+                    <h2>Lets talk about my <span class="highlight">background</span> -</h2>
+                    <p>Previously, I was in the marketing and sales industry with a certification in Marketing
+                        Management - Communications. However, I always wanted to pursue a career in design. </p>
+                    <br>
+                    <p>Growing up, I was always interested in different forms of art such as, photography, architecture,
+                        film, dance and fashion. What really draws me to the creative industry is the powerful outlet it
+                        provides for self-expression.</p>
+                    <br>
+                    <p>With this in mind, I’ve chosen to go into product design, a creative field where I can blend my
+                        values of <span class="highlight">authenticity</span>, <span class="highlight">curiosity</span>,
+                        and <span class="highlight">practicality</span> to create meaningful and effective
+                        solutions.</p>
+                </div> -->
             </div>
+
 
         </div>
 
-        <div class="about-background">
-            <h2>Let's talk about my <span class="highlight">background</span></h2>
-            <p>Previously, I was in the marketing and sales industry with a certification in Marketing Management -
-                Communications. However, I always wanted to pursue a career in design. </p><br>
-            <p>Growing up, I was always interested in different forms of art such as, photography, architecture, film,
-                dance and fashion. What really draws me to the creative industry is the powerful outlet it provides for
-                self-expression.</p><br>
-            <p>With this in mind, I’ve chosen to go into product design, a creative field where I can blend my values of
-                authenticity, curiosity, and practicality to create meaningful and effective solutions.</p>
-            
-        </div>
 
         <div class="component contact contact-border">
 
@@ -226,6 +211,30 @@
     <!-- Hero Section Marquee -->
     <script src="js/imageMarquee.js"></script>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let brandImageBlock = document.getElementById("about-intro");
+        let brandImagePin = document.getElementById("pin");
+        let brandImageNotPin = document.getElementById("not-pin");
+
+        ScrollTrigger.create({
+            trigger: brandImagePin,
+            start: "top 20%",
+
+            endTrigger: brandImageNotPin,
+            end: () => `bottom 20%+=${brandImagePin.offsetHeight}`,
+
+            // the nect line (with the arrow function) is 'a functional value' () =>
+            // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
+
+            // this line ensures the functional value gets recalculated on resize
+            invalidateOnRefresh: true,
+
+            pin: brandImagePin,
+            // pinSpacing: true,
+        });
+    </script>
 </body>
 
 </html>

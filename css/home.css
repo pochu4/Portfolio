@@ -221,7 +221,7 @@
 
 @media (min-width: 1600px) {}
 
-@media (min-width: 1800px) {
+@media (min-width: 1920px) {
     .hero-marquee {
         height: 600px;
     }
@@ -240,7 +240,7 @@
         font-size: 1.5rem;
     }
    .featured-projects {
-    max-width: 80%;
+    max-width: 1600px;
     margin: 0 auto;
    }
 }

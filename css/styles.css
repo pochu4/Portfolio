@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Geist'; 
+  font-family: 'Geist';
   src: url('./fonts/Geist-Regular.otf') format('opentype');
   font-weight: 400;
 }
@@ -38,7 +38,8 @@ h1 {
 h2 {
   font-family: var(--elza);
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: var(--gray);
 }
 
 h3 {
@@ -152,21 +153,28 @@ p {
   .component {
     margin: 0 5rem;
   }
-  h1{
+
+  h1 {
     font-size: 4rem;
   }
-  h3{
+
+  h2 {
     font-size: 2rem;
   }
-  p{
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1920px) {
   .component {
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 1600px;
   }
 }
 

@@ -17,6 +17,11 @@ header {
   padding: 2rem 2rem;
   background-color: #353632;
   z-index: 20;
+  transition: ease 0.4s;
+
+  &--scrolled {
+    height: 2rem;
+  }
 }
 
 
