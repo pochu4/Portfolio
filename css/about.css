@@ -220,13 +220,19 @@ ion-icon {
     font-size: 2rem;
 }
 .p-reg {
-    font-family: var(--geist);
+    font-family: var(--elza);
+    font-weight: 400;
     font-size: 0.875rem;
+    /* line-height: 1rem; */
 }
 .p-light {
     font-family: var(--geistLight);
+    /* font-style: italic; */
     font-size: 0.75rem;
     margin-top: 0.5rem;
+}
+.p-light_special {
+    font-style: italic;
 }
 
 .mini-cv {

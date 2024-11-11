@@ -297,3 +297,16 @@ footer {
       width: 35%;
     }
   }
+
+  @media (min-width: 1920px) {
+    .footer-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+    .footer-notes {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+  }
