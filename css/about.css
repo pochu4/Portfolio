@@ -280,6 +280,7 @@ ion-icon {
     justify-content: center;
     border-top: 1px solid var(--beige);
     padding-top: 2rem;
+    margin: 0 1rem;
 }
 
 .cv-spacer {
@@ -319,8 +320,13 @@ ion-icon {
     .p-light {
         font-size: 1rem;
     }
-
+    
     /*  */
+
+    .mini-cv_cta {
+        margin: 0 4rem;
+    }
+
     .mini-cv_education {
         margin: 0 4rem;
     }
@@ -335,7 +341,7 @@ ion-icon {
 @media (min-width: 1024px) {
 
     .about-intro {
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         flex-direction: row-reverse;
         gap: 1rem;
@@ -348,7 +354,7 @@ ion-icon {
     }
 
     .about-intro_img {
-        width: 40%;
+        width: inherit;
     }
 
     .about-intro_img img {
@@ -437,14 +443,20 @@ ion-icon {
     }
 
     .about-intro_img img {
-        max-width: 40rem;
-        max-height: 40rem;
+        max-width: 30rem;
+        max-height: 30rem;
     }
 
     .about-header h1 {
         margin: 4rem 0;
         font-size: 6rem;
     }
+
+    .mini-cv_cta {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
     .mini-cv_education {
         max-width: 1600px;
         margin: 0 auto;

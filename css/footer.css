@@ -25,7 +25,6 @@ footer {
   padding: 1rem 1rem;
 }
 
-.footer-container {}
 
 .footer-container_logo a img {
   height: 7rem;
@@ -241,7 +240,7 @@ footer {
   }
 
   .footer-container_logo a img {
-    height: 6rem;
+    height: 3rem;
   }
 }
   @media (min-width: 1024px) {
@@ -273,7 +272,7 @@ footer {
     }
 
     .footer-container_logo a img {
-      height: 9rem;
+      height: 3rem;
     }
   }
 
@@ -285,7 +284,7 @@ footer {
       margin: 0 5rem;
     }
     .footer-container_logo a img {
-      height: 10rem;
+      height: 3rem;
     }
     .footer-notes {
       margin: 0 5rem;

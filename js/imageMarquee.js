@@ -125,7 +125,7 @@ function detectIE() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const slider = new InfiniteSlider(20000)
+    const slider = new InfiniteSlider(40000)
     const ie = detectIE()
 
     //Dont animate under IE10, just place the images
