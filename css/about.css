@@ -221,7 +221,7 @@ ion-icon {
 }
 .p-reg {
     font-family: var(--elza);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 0.875rem;
     /* line-height: 1rem; */
 }
@@ -233,6 +233,7 @@ ion-icon {
 }
 .p-light_special {
     font-style: italic;
+    margin: 0 0 ;
 }
 
 .mini-cv {
@@ -279,6 +280,10 @@ ion-icon {
     justify-content: center;
     border-top: 1px solid var(--beige);
     padding-top: 2rem;
+}
+
+.cv-spacer {
+    margin: 1rem 0;
 }
 
 /* Media Queries */
@@ -388,7 +393,7 @@ ion-icon {
         width: 45%;
     }
     .cv-spacer {
-        margin: 2rem 0;
+        margin-top: 2rem;
     }
     .mini-cv_tools {
         width: 45%;
@@ -415,7 +420,7 @@ ion-icon {
     }
     
     .mini-cv_education-copy {
-        margin: 0 2rem 1rem 0;
+        margin: 0 2rem 0rem 0;
     }
 }
 
