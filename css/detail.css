@@ -65,9 +65,40 @@
 @media (min-width: 400px) {}
 
 @media (min-width: 768px) {
-    
+    .project-header {
+        margin: 0 4rem;
+    }
+    .project-details {
+        margin: 0 4rem;
+    }
 }
 
 @media (min-width: 1024px) {}
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+    .project-header {
+        margin: 0 5rem;
+    }
+    .project-details {
+        margin: 0 5rem;
+    }
+    .project-details p {
+        width: 70%;
+    }
+    .project-details_intro img{
+        width: 100%;
+        height: auto;
+        max-height: 40rem;
+        object-fit: cover;
+    }
+}
+@media (min-width: 1920px) {
+    .project-header {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .project-details {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
