@@ -21,51 +21,53 @@
     --geistLight: 'Geist Light', sans-serif;
 }
 
-.projects-header {
-    margin: 0 1rem;
+.project-header {
+    text-align: center;
     padding-top: 5rem;
+    font-family: var(--elza);
+    margin: 0 1rem;
 }
 
-.filter-nav {
-    margin: 0rem 1rem 1rem 1rem;
+.project-information {
     display: flex;
-    gap: 0.25rem;
-    border-bottom: 1px solid var(--gray);
+    justify-content: center;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+.project-information_role {
+    width: 33%;
 }
 
-.filter-nav button {
-    background-color: none;
-    border: none;
-    padding: 5px;
+.project-information_role .p-reg {
+    margin-top: 0.5rem
+}
+.project-information_role .p-light {
+    margin-top: 1rem;
 }
 
-.project-link {
-    text-decoration: none;
+.project-details {
+    margin: 1rem 1rem;
 }
 
-.project-link ion-icon {
-    color: var(--gray);
+.project-details p {
+    margin: 1rem 0;
+    width: 80%;
 }
+
+.project-details_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 
 @media (min-width: 400px) {}
 
 @media (min-width: 768px) {
-    .projects-header {
-        margin: 0 4rem;
-    }
+    
 }
 
 @media (min-width: 1024px) {}
 
 @media (min-width: 1280px) {}
-
-@media (min-width: 1920px) {
-    .projects-header {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-    .filter-nav {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-}
