@@ -60,7 +60,34 @@
     justify-content: center;
     align-items: flex-end;
 }
+.project-details_intro img {
+    margin-top: 1rem;
+}
 
+.project-details_intro p {
+    margin: 1rem 0;
+}
+
+.roam-challenges {
+    background-color: var(--gray);
+    padding: 1rem;
+}
+
+.roam-section_title {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.section-title_white {
+    color: var(--beige);
+}
+
+.section-subtitle_white {
+    color: var(--beige);
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
 
 @media (min-width: 400px) {}
 
