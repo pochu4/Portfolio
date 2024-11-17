@@ -278,16 +278,18 @@ footer {
 
   @media (min-width: 1280px) {
     footer {
-      padding: 1rem 3rem;
+      padding: 1rem 0rem;
     }
     .footer-container {
-      margin: 0 5rem;
+      margin: 0 4rem;
+      padding: 0;
     }
     .footer-container_logo a img {
       height: 3rem;
     }
     .footer-notes {
-      margin: 0 5rem;
+      margin: 0 4rem;
+      padding: 0;
     }
     .footer-notes p {
       font-size: 1rem;
