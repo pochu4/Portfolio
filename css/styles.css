@@ -116,6 +116,14 @@ p {
   color: var(--gray);
 }
 
+.project-link {
+  text-decoration: none;
+}
+
+.project-link ion-icon {
+  color: var(--gray);
+}
+
 @media (min-width: 400px) {}
 
 @media (min-width: 768px) {

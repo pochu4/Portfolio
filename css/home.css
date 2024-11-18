@@ -90,7 +90,7 @@
 }
 
 .hero-content_bio {
-    width: 80%;
+    width: 100%;
 }
 
 .hero-content_bio p {
@@ -176,25 +176,20 @@
 
 @media (min-width: 768px) {
     .hero-content {
-        margin: 0 4rem;
+        margin: 0 2rem;
     }
 
     .hero-content_name h1 {
-        font-size: 6rem;
-        text-align: end;
+        font-size: 5rem;
         margin-top: 1rem;
         line-height: 1;
     }
 
     .hero-content_bio {
         width: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: end;
     }
 
     .hero-content_bio p {
-        width: 70%;
         font-size: 1.5rem;
     }
     .featured-projects {
@@ -203,22 +198,34 @@
 }
 
 @media (min-width: 1024px) {
-    .hero-content_bio p {
-        width: 70%;
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .hero-content_container {
+        width: 50%;
+    }
+
+    .hero-content_bio{
+        padding-left: 2rem;
     }
 }
 
 @media (min-width: 1280px) {
+    
     .hero-content_name h1 {
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .hero-content_bio p {
-        width: 45%;
+        width: 100%;
         font-size: 1.25rem;
     }
     .featured-projects {
-        margin: 0 5rem;
+        margin: 0 4rem;
     }
     .featured-project1 {
         max-width: 50%;
@@ -232,12 +239,12 @@
 
 @media (min-width: 1920px) {
     .hero-marquee {
-        height: 600px;
+        height: 500px;
     }
 
     .slider img {
-        max-width: 600px;
-        max-height: 600px;
+        max-width: 500px;
+        max-height: 500px;
         object-fit: cover;
     }
 
@@ -246,8 +253,8 @@
     }
 
     .hero-content_bio p {
-        width: 42.5%;
-        font-size: 1.5rem;
+        /* width: 42.5%; */
+        font-size: 1.25rem;
     }
    .featured-projects {
     max-width: 1600px;
