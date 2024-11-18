@@ -112,6 +112,10 @@ p {
   }
 }
 
+.cta-gray {
+  color: var(--gray);
+}
+
 @media (min-width: 400px) {}
 
 @media (min-width: 768px) {

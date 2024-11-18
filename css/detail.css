@@ -34,6 +34,7 @@
     margin: 0 1rem;
     gap: 1rem;
 }
+
 .project-information_role {
     width: 33%;
 }
@@ -41,6 +42,7 @@
 .project-information_role .p-reg {
     margin-top: 0.5rem
 }
+
 .project-information_role .p-light {
     margin-top: 1rem;
 }
@@ -51,7 +53,6 @@
 
 .project-details p {
     margin: 1rem 0;
-    width: 75%;
 }
 
 .project-details_intro {
@@ -59,8 +60,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-}
-.project-details_intro img {
 }
 
 .project-details_intro p {
@@ -103,9 +102,11 @@
     margin-top: 1.5rem;
     gap: 1rem;
 }
+
 .icon-container_content {
     width: 48%;
 }
+
 .icon-container_content ion-icon {
     font-size: 32px;
 }
@@ -121,25 +122,109 @@
 .project-detail_component {
     margin: 1rem 1rem;
 }
+
 .project-detail_component p {
     font-size: 1rem;
     margin: 1rem 0;
 }
+
 .title-sub p {
     margin-top: 0.5rem;
 }
+
 .comp-image-2 {
     margin-top: 1rem
 }
+
 .sub-standalone {
     display: flex;
     justify-content: flex-end;
 }
-.img-standalone{
+
+.img-standalone {
     margin: 1rem 0;
     display: flex;
     justify-content: flex-end;
 }
+
+.roam-custom_2 {
+    background-color: var(--gray);
+}
+
+.roam-custom_2-images {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.roam-custom_2-images img {
+    width: 50%;
+}
+
+/* Closing Section */
+.closing-title_sub {
+    margin-top: 1rem;
+}
+
+.details-cta {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.details-cta a {
+    font-family: var(--elza);
+    font-size: 0.875rem;
+    text-underline-offset: 0.25rem;
+    color: var(--gray);
+    width: 33%;
+    padding-bottom: 0.25rem;
+}
+
+.details-cta a:hover {
+    color: var(--orange);
+}
+
+.prev-project {
+    text-align: left;
+}
+
+.project-view_link {
+    text-align: center;
+}
+
+.next-project {
+    text-align: end;
+}
+
+.virtus-custom_1 {
+    background-color: var(--gray);
+}
+
+.virtus-custom_1-images {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.virtus-custom_1-images img {
+    width: 30%;
+}
+
+.detail_component-image_2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.epure-closing_img {
+    width: 100%;
+}
+
 
 
 @media (min-width: 400px) {}
@@ -149,23 +234,29 @@
     .project-header {
         margin: 0 4rem;
     }
+
     .project-details {
         margin: 0 4rem;
     }
+
     .project-information {
         margin-bottom: 1rem;
     }
+
     .roam-challenges {
         padding: 2rem 4rem;
     }
+
     .section-subtitle_white {
         font-size: 1rem;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
     }
+
     .beige-p {
         font-size: 1rem;
     }
+
     .icon-container_content ion-icon {
         font-size: 48px;
     }
@@ -173,6 +264,26 @@
     /* Default Component Styling */
     .project-detail_component {
         margin: 1rem 4rem;
+    }
+
+    .roam-custom_2-images {
+        margin: 0 4rem;
+    }
+
+    .roam-custom_2-images img {
+        width: 25%;
+    }
+
+    .closing-image {
+        margin-top: 2rem;
+    }
+
+    .details-cta {
+        margin: 2rem 4rem;
+    }
+
+    .virtus-custom_1-images {
+        margin: 0 4rem;
     }
 }
 
@@ -182,10 +293,29 @@
         display: flex;
         justify-content: center;
     }
-    .roam-image img{
+
+    .roam-image img {
         width: 100%;
         height: auto;
         object-fit: cover;
+    }
+
+    .details-cta a {
+        font-size: 1.25rem;
+    }
+
+    .detail_component-image_2 {
+        display: flex;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .virtus-closing_img {
+        max-height: 400px;
+        margin: 0 auto;
+    }
+    .macade-image_spacing {
+        justify-content: flex-end;
     }
 }
 
@@ -194,20 +324,23 @@
     .project-header {
         margin: 0 5rem;
     }
+
     .project-details {
         margin: 0 5rem;
     }
+
     .project-details p {
         width: 70%;
     }
-    .project-details_intro img{
+
+    .project-details_intro img {
         width: 100%;
         height: auto;
-        max-height: 40rem;
+        /* max-height: 40rem; */
         object-fit: cover;
     }
 
-    .roam-image img{
+    .roam-image img {
         max-height: 600px;
     }
 
@@ -218,42 +351,50 @@
     .title-sub p {
         margin-top: 0rem;
     }
-    
+
     .project-details_intro p {
         margin: 3rem 0;
         width: 60%;
         font-size: 1.5rem;
     }
+
     .roam-icon_container {
         gap: 0.75rem;
     }
+
     /* Default Component Styling */
     .project-detail_component {
         margin: 3rem 4rem;
     }
+
     .title-sub {
         display: flex;
         justify-content: space-between;
         margin-bottom: 3rem;
     }
+
     .project-detail_component h3 {
         width: 30%;
     }
+
     .project-detail_component p {
         width: 60%;
         font-size: 1.25rem;
     }
+
     .detail_component-image {
         display: flex;
         width: 100%;
         justify-content: space-between;
         gap: 2rem;
         margin-bottom: 3rem;
-        
+
     }
+
     .detail_component-image img {
         max-height: 600px;
     }
+
     .comp-image-1 {
         width: 40%;
         height: auto;
@@ -266,21 +407,80 @@
         height: auto;
         object-fit: cover;
     }
+
     .sub-standalone {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 3rem;
     }
-    .img-standalone{
+
+    .img-standalone {
+        margin-top: 0;
         margin-bottom: 3rem;
         display: flex;
         justify-content: flex-end;
         width: 100%;
     }
+
     .img-standalone img {
         width: 60%;
     }
 
+    .roam-custom_2 {
+        margin-bottom: 3rem;
+    }
+
+    .roam-custom_2-images img {
+        width: 12.5%;
+    }
+
+    .closing-image {
+        margin-top: 3rem;
+    }
+
+    .details-cta {
+        max-width: 1600px;
+        margin: 3rem auto;
+    }
+
+    .detail_component-image_2 img {
+        margin: 0rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .virtus-closing_img {
+        max-height: 500px;
+    }
+
+    .epure-intro_image {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .virtus-intro_img {
+        max-width: 1300px;
+        width: 100%;
+        max-height: auto;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .roam-intro_img {
+        max-width: 1300px;
+        margin: 0 auto;
+        max-height: 700px;
+    }
+    .macade-intro_img {
+        max-width: 1300px;
+        margin: 0 auto;
+        max-height: 700px;
+    }
+    
+    .macade-identity_image {
+        margin: 0 0;
+        margin-bottom: 2rem;
+    }
+    .macade-identity_image2 {
+        margin-bottom: 2rem;
+    }
 
 }
 
@@ -290,10 +490,12 @@
         max-width: 1600px;
         margin: 0 auto;
     }
+
     .project-details {
         max-width: 1600px;
         margin: 0 auto;
     }
+
     .roam-image {
         max-width: 1600px;
         margin: 0 auto;
@@ -303,6 +505,7 @@
         max-width: 1600px;
         margin: 0 auto;
     }
+
     .beige-p {
         font-size: 1.25rem;
     }
@@ -312,7 +515,24 @@
         max-width: 1600px;
         margin: 0 auto;
     }
+
     .title-sub {
         margin: 3rem 0;
     }
+
+    .roam-custom_2-images {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .virtus-custom_1-images {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .virtus-closing_img {
+        max-height: 700px;
+    }
+
+
 }
