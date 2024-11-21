@@ -186,7 +186,10 @@ p {
 @media (min-width: 1920px) {
   .component {
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1700px;
+  }
+  h1 {
+    font-size: 5rem;
   }
 }
 

@@ -23,23 +23,12 @@
 
 .projects-header {
     margin: 0 1rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
-.filter-nav {
-    margin: 0rem 1rem 1rem 1rem;
-    display: flex;
-    gap: 0.25rem;
-    border-bottom: 1px solid var(--gray);
+.projects-container {
+    margin-top: 1rem;
 }
-
-.filter-nav button {
-    background-color: none;
-    border: none;
-    padding: 5px;
-}
-
-
 
 @media (min-width: 400px) {}
 
@@ -51,15 +40,45 @@
 
 @media (min-width: 1024px) {}
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+    .project-roam {
+        width: 45%;
+    }
+    .project-roam img {
+        height: 700px;
+        width: auto;
+        object-fit: cover;
+    }
+    .project-virtus {
+        width: 47.5%;
+    }
+    .project-virtus img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        max-height: auto;
+    }
+    .project-epure {
+        margin-top: 3rem;
+        width: 60%;
+    }
+    .project-epure img{
+        width: 100%;
+    }
+    .project-macade {
+        width: 40%;
+        margin-top: -160px;
+    }
+}
 
 @media (min-width: 1920px) {
     .projects-header {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
     .filter-nav {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 }
