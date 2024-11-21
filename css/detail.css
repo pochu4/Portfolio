@@ -439,7 +439,7 @@
     }
 
     .details-cta {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 3rem auto;
     }
 
@@ -487,22 +487,22 @@
 /* Really Large Screens */
 @media (min-width: 1920px) {
     .project-header {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .project-details {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .roam-image {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .roam-icon_container {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
@@ -512,7 +512,7 @@
 
     /* Default Component Styling */
     .project-detail_component {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
@@ -521,12 +521,12 @@
     }
 
     .roam-custom_2-images {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .virtus-custom_1-images {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 

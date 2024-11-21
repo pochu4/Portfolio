@@ -39,10 +39,6 @@ section {
     height: inherit;
 }
 
-.about-header h1 {
-    font-size: 3rem;
-}
-
 .about-intro {
     display: flex;
     justify-content: space-between;
@@ -75,6 +71,7 @@ section {
 ion-icon {
     color: var(--orange);
     margin: 0 1rem;
+    font-size: 32px;
 }
 
 
@@ -211,7 +208,8 @@ ion-icon {
 
 
 /* CV SECTION */
-.mini-cv h3, .mini-cv p {
+.mini-cv h3,
+.mini-cv p {
     color: var(--beige);
 }
 
@@ -219,21 +217,24 @@ ion-icon {
     font-family: var(--elza);
     font-size: 2rem;
 }
+
 .p-reg {
     font-family: var(--elza);
     font-weight: 450;
     font-size: 0.875rem;
     /* line-height: 1rem; */
 }
+
 .p-light {
     font-family: var(--geistLight);
     /* font-style: italic; */
     font-size: 0.75rem;
     margin-top: 0.5rem;
 }
+
 .p-light_special {
     font-style: italic;
-    margin: 0 0 ;
+    margin: 0 0;
 }
 
 .mini-cv {
@@ -241,10 +242,12 @@ ion-icon {
     padding: 2rem 0;
     color: var(--beige);
 }
+
 .mini-cv_education {
     margin: 0 1rem;
     border-bottom: 1px solid var(--beige);
 }
+
 .mini-cv_education-copy {
     margin: 1rem 0 2rem 0;
 }
@@ -261,12 +264,14 @@ ion-icon {
     align-items: flex-start;
     gap: 1.25rem;
 }
+
 .mini-cv_skills-copy {
     width: 60%;
     display: flex;
     justify-content: space-between;
     gap: 1.25rem;
 }
+
 .mini-cv_tools {
     display: flex;
     justify-content: space-between;
@@ -296,31 +301,30 @@ ion-icon {
         margin: 0rem 4rem;
     }
 
-    .about-header h1 {
-        font-size: 4rem;
-    }
-
     .about-intro_img {
         width: 100%;
+        margin-top: 1rem;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            max-height: 20rem;
-            object-fit: cover;
-        }
+    .about-intro_img img {
+        width: 100%;
+        height: auto;
+        max-height: 20rem;
+        object-fit: cover;
     }
 
     .cv-title {
         font-size: 2.5rem;
     }
+
     .p-reg {
         font-size: 1.375rem;
     }
+
     .p-light {
         font-size: 1rem;
     }
-    
+
     /*  */
 
     .mini-cv_cta {
@@ -343,8 +347,8 @@ ion-icon {
     .about-intro {
         justify-content: space-between;
         align-items: flex-start;
-        flex-direction: row-reverse;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 4rem;
     }
 
     .about-intro_copy {
@@ -383,7 +387,7 @@ ion-icon {
 
     .mini-cv_education {
         display: flex;
-        justify-content: space-between;   
+        justify-content: space-between;
     }
 
     .mini-cv_education-copy {
@@ -395,12 +399,15 @@ ion-icon {
         justify-content: space-between;
         gap: 1rem;
     }
+
     .mini-cv_skills {
         width: 45%;
     }
+
     .cv-spacer {
         margin-top: 2rem;
     }
+
     .mini-cv_tools {
         width: 45%;
         margin-top: 0;
@@ -408,23 +415,28 @@ ion-icon {
 
 
 }
+
 @media (min-width: 1280px) {
     .mini-cv_education {
         margin: 0 5rem;
     }
+
     .mini-cv_container {
         margin: 0 5rem;
     }
+
     .cv-title {
         font-size: 2.5rem;
     }
+
     .p-reg {
         font-size: 1.25rem;
     }
+
     .p-light {
         font-size: 1rem;
     }
-    
+
     .mini-cv_education-copy {
         margin: 0 2rem 0rem 0;
     }
@@ -433,12 +445,12 @@ ion-icon {
 
 @media (min-width: 1920px) {
     .about-header {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .about-background {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
@@ -447,23 +459,18 @@ ion-icon {
         max-height: 30rem;
     }
 
-    .about-header h1 {
-        margin: 4rem 0;
-        font-size: 6rem;
-    }
-
     .mini-cv_cta {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .mini-cv_education {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
     .mini-cv_container {
-        max-width: 1600px;
+        max-width: 1700px;
         margin: 0 auto;
     }
 
@@ -473,15 +480,19 @@ ion-icon {
         justify-content: space-between;
         gap: 4rem; */
     }
+
     .cv-spacer {
         margin: 2rem 0;
     }
+
     .p-light {
         font-size: 1.25rem;
     }
+
     .p-reg_special {
         font-size: 1.5rem;
     }
+
     .p-light_special {
         font-size: 1.25rem;
     }
@@ -489,7 +500,7 @@ ion-icon {
 
 
 /* My background section - built from desktop down to mobile */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .about-background {
         flex-direction: column;
         justify-content: center;
@@ -520,7 +531,7 @@ ion-icon {
     }
 
     .background-text p {
-        font-size: 14px;
+        font-size: 1.5rem;
     }
 
     .progress-bar {
@@ -534,6 +545,18 @@ ion-icon {
         bottom: unset;
     }
 }
+
+@media (max-width: 1028px) {
+
+}
+
+@media (max-width: 1280px) {
+    .background-title p {
+        font-size: 2rem;
+    }
+}
+
+
 
 .lenis.lenis-smooth {
     scroll-behavior: auto !important;
@@ -550,3 +573,4 @@ ion-icon {
 .lenis.lenis-smooth iframe {
     pointer-events: none;
 }
+
