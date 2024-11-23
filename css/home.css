@@ -128,8 +128,6 @@
     img {
         margin-bottom: 0.5rem;
     }
-
-    ;
 }
 
 .project-date {
@@ -177,7 +175,7 @@
 .featured-projects_cta a {
     text-decoration: none;
     font-size: 1.25rem;
-    color: var(--l-gray);
+    color: var(--graygray);
     font-family: var(--geistLight);
 }
 
@@ -250,11 +248,11 @@
     }
 
     .featured-project1 {
-        max-width: 52.5%;
+        max-width: 50%;
     }
 
     .featured-project2 {
-        max-width: 42.5%;
+        max-width: 40%;
     }
     .featured-project2 img{
         max-height: 600px;

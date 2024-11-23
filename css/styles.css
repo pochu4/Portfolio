@@ -226,11 +226,11 @@ p {
   height: 100vh;
   z-index: 3;
   pointer-events: none;
-} */
+}
 
-/* .bar {
+.bar {
   width: 100vw;
-  height: 105vh;
+  height: 100vh;
   background: #3A3D36;
   pointer-events: none;
 }

@@ -25,10 +25,16 @@
     margin: 0 1rem;
     padding-top: 6rem;
 }
+.projects-header h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
 
 .projects-container {
     margin-top: 1rem;
 }
+
+
 
 @media (min-width: 400px) {}
 
@@ -36,13 +42,17 @@
     .projects-header {
         margin: 0 4rem;
     }
+    .projects-header h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+    }
 }
 
 @media (min-width: 1024px) {}
 
 @media (min-width: 1280px) {
     .project-roam {
-        width: 45%;
+        width: 42.5%;
     }
     .project-roam img {
         height: 700px;
@@ -61,13 +71,13 @@
     }
     .project-epure {
         margin-top: 3rem;
-        width: 60%;
+        width: 52.5%;
     }
     .project-epure img{
         width: 100%;
     }
     .project-macade {
-        width: 40%;
+        width: 37.5%;
         margin-top: -160px;
     }
 }
@@ -80,5 +90,12 @@
     .filter-nav {
         max-width: 1700px;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 2560px) {
+    .projects-header h1 {
+        font-size: 7rem;
+        line-height: auto;
     }
 }
