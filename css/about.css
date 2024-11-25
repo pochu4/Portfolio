@@ -495,14 +495,14 @@ ion-icon {
 
 @media (min-width: 1920px) {
     .about-header {
-        height: 60vh;
-        max-width: 1700px;
+        height: 65vh;
+        max-width: 1600px;
         margin: 0 auto;
         padding-top: 5.5rem;
     }
 
     .about-background {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -522,29 +522,28 @@ ion-icon {
 
     .about-intro_copy h3 {
         width: 100%;
-        font-size: 2.25rem;
+        font-size: 2rem;
         font-weight: 450;
         text-wrap: pretty;
     }
 
     .about-intro_copy p {
-        
         text-wrap: pretty;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .mini-cv_cta {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
     .mini-cv_education {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
     .mini-cv_container {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 

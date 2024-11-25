@@ -67,15 +67,14 @@ p {
   font-style: italic;
 }
 
-.contact-border {
-  border-top: solid 1px var(--gray);
-}
-
+/* .contact-border {
+  border-top: solid 0.5px var(--gray);
+} */
 
 /* Main Component */
 .component {
   margin: 0 1rem;
-  padding: 4rem 0;
+  padding: 3rem 0 4rem 0;
 }
 
 .comp-container {
@@ -89,7 +88,6 @@ p {
 
 .component-text {
   width: 80%;
-  /* text-align: justify; */
   padding: 2rem 0;
 }
 
@@ -101,16 +99,17 @@ p {
 
 .component-subhead_container {
   width: 80%;
-
-  h3 {
-    border-bottom: 1px solid #353632;
-  }
-
-  p {
-    text-align: end;
-    padding-top: 0.375rem;
-  }
 }
+
+.component-subhead_container h3 {
+  border-bottom: 1px solid #353632;
+}
+
+.component-subhead_container p {
+  text-align: end;
+  padding-top: 0.375rem;
+}
+
 
 .cta-gray {
   color: var(--gray);
@@ -122,6 +121,12 @@ p {
 
 .project-link ion-icon {
   color: var(--gray);
+}
+
+.reveal {
+  visibility: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 400px) {}
@@ -186,7 +191,7 @@ p {
 @media (min-width: 1920px) {
   .component {
     margin: 0 auto;
-    max-width: 1700px;
+    max-width: 1600px;
   }
   h1 {
     font-size: 5rem;

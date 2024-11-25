@@ -6,22 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Johann Chua</title>
+  <!-- Favicon -->
   <link rel="icon" href="images/Submark.svg" type="image/svg+xml">
-
-
   <!-- Reset Stylesheet -->
   <link rel="stylesheet" href="css/reset.css">
-
   <!-- Adobe Font - Elza -->
   <link rel="stylesheet" href="https://use.typekit.net/nxl4qpa.css">
-
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/home.css">
-
-
 </head>
 
 <body>
@@ -33,7 +28,6 @@
     <div class="bar"></div>
   </div>
  -->
-
 
   <!-- Header -->
   <header class="main-tool-bar">
@@ -87,10 +81,10 @@
       <div class="hero-content">
         <div class="hero-content_container">
           <div class="hero-content_name">
-            <h1>Johann Chua</h1>
+            <h1 class="hero-header-ani">Johann Chua</h1>
           </div>
           <div class="hero-content_bio">
-            <p>A <span class="highlight">Digital Identity</span> & <span class="highlight">Product Designer</span>
+            <p class="hero-bio-ani">A <span class="highlight">Digital Identity</span> & <span class="highlight">Product Designer</span>
               based
               in Vancouver, BC. Passionate about visual design, I hope to
               pursue opportunities within the creative industry and hope to apply user-centric design principles to
@@ -108,22 +102,22 @@
     <div class="component intro comp-intro ">
 
       <div class="component-header">
-        <h1>My <span class="h1-highlight">Goals</span></h1>
+        <h1 class="goals-header-ani">My <span class="h1-highlight">Goals</span></h1>
       </div>
 
       <div class="comp-container">
 
         <div class="component-text">
-          <p>I aim to keep pushing creative boundaries and design work that’s not only
+          <p class="component-text-ani">I aim to keep pushing creative boundaries and design work that’s not only
             visually
-            appealing but also <span class="highlight">functional </span>and <span class="highlight">impactful</span>.
+            appealing but also <span class="highlight">functional</span> and <span class="highlight">impactful</span>.
           </p>
         </div>
 
         <div class="component-subhead">
           <div class="component-subhead_container">
-            <h3>What I Strive For</h3>
-            <p>Blending Creativity with Practicality.</p>
+            <h3 class="subhead-title-ani">What I Strive For</h3>
+            <p class="subhead-text-ani">Blending Creativity with Practicality.</p>
           </div>
         </div>
 
@@ -133,21 +127,23 @@
     <div class="featured-projects">
 
       <div class="featured-projects_title">
-        <h1>Featured <span class="h1-highlight">Projects</span></h1>
+        <h1 class="featured-header-ani">Featured <span class="h1-highlight">Projects</span></h1>
       </div>
 
       <div class="featured-projects_content">
 
         <div class="featured-project1">
-          <p class="project-date">07/04</p>
+          <p class="project-date project-date-ani">07/04</p>
           <a href="roam.html" class="project-link">
             <div class="project-name_role">
-              <h2>ROAM</h2>
-              <p>UX Strategy, UI Design</p>
+              <h2 class="project-name-ani">ROAM</h2>
+              <p class="project-role-ani">UX Strategy, UI Design</p>
             </div>
-            <img src="./images/roam/roam-hero.png" alt="">
+            <div class="reveal">
+              <img src="./images/roam/roam-hero.png" alt="Roam Hiking">
+            </div>
             <div class="project-description">
-              <p>A Hiking Companion for Trail Seekers</p>
+              <p class="project-desc-ani">A Hiking Companion for Trail Seekers</p>
               <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
             </div>
           </a>
@@ -155,15 +151,17 @@
 
         <div class="featured-project2">
           <div class="featured-project_content">
-            <p class="project-date">02/28</p>
+            <p class="project-date project-date-ani">02/28</p>
             <a href="virtus.html" class="project-link">
               <div class="project-name_role">
-                <h2>Virtus</h2>
-                <p>UX Strategy, UI Design</p>
+                <h2 class="project-name-ani">Virtus</h2>
+                <p class="project-role-ani">UX Strategy, UI Design</p>
               </div>
-              <img src="./images/virtus/virtus-hero.png" alt="">
+              <div class="reveal">
+                <img src="./images/virtus/virtus-hero.png" alt="Virtus Health and Wellness">
+              </div>
               <div class="project-description">
-                <p>Beyond the Gym Floor</p>
+                <p class="project-desc-ani">Beyond the Gym Floor</p>
                 <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
               </div>
             </a>
@@ -181,7 +179,7 @@
     <div class="component contact contact-border">
 
       <div class="component-header">
-        <h1>Let's Work <span class="h1-highlight">Together</span></h1>
+        <h1 class="contact-header-ani">Let's Work <span class="h1-highlight">Together</span></h1>
       </div>
 
       <div class="comp-container">
@@ -280,14 +278,24 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <!-- Split Type by Luke Peavey -->
+  <script src="https://unpkg.com/split-type"></script>
+
   <!-- Loading Screen Script -->
   <!-- <script src="js/loader.js"></script> -->
+
+  <!-- Hero Section Marquee -->
+  <script src="js/imageMarquee.js"></script>
 
   <!-- Full Screened Menu Script using GSAP -->
   <script src="js/fsmenu.js"></script>
 
-  <!-- Hero Section Marquee -->
-  <script src="js/imageMarquee.js"></script>
+  <!-- Image Reveal Animations -->
+  <script src="js/imageReveal.js"></script>
+
+  <!-- Text Reveal Animations -->
+  <script src="js/textReveal.js"></script>
+
 
 </body>
 

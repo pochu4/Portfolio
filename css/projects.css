@@ -84,11 +84,11 @@
 
 @media (min-width: 1920px) {
     .projects-header {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
     .filter-nav {
-        max-width: 1700px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 }
