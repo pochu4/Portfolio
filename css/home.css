@@ -154,7 +154,7 @@
     align-items: center;
 }
 
-.featured-project1 img,
+/* .featured-project1 img,
 .featured-project2 img {
     filter: saturate(0);
 }
@@ -162,8 +162,7 @@
 .featured-project1:hover img,
 .featured-project2:hover img {
     filter: saturate(1);
-    /* Increase saturation of the image on hover */
-}
+} */
 
 .featured-projects_cta {
     display: flex;
@@ -175,7 +174,7 @@
 .featured-projects_cta a {
     text-decoration: none;
     font-size: 1.25rem;
-    color: var(--graygray);
+    color: var(--gray);
     font-family: var(--geistLight);
 }
 
