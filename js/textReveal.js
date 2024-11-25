@@ -3,21 +3,23 @@ const header = new SplitType('.hero-header-ani', { types: 'chars' })
 
 gsap.from(header.chars, {
     opacity: 0,
-    x: 1,
+    y: 25,
     duration: 1,
     delay: 0.5,
+    ease: "power3.inOut",
     stagger: { amount: 0.7 },
 })
 
 // Hero Section Bio
-const headerBio = new SplitType('.hero-bio-ani', { types: 'chars' })
+const headerBio = new SplitType('.hero-bio-ani', { types: 'words' })
 
-gsap.from(headerBio.chars, {
+gsap.from(headerBio.words, {
     opacity: 0,
-    x: 0,
+    y: 25,
     duration: 1,
     delay: 2,
-    stagger: { amount: 1 },
+    ease: "power3.inOut",
+    stagger: { amount: 1.5 },
 
 })
 
@@ -96,6 +98,7 @@ gsap.from(projectName.chars, {
     delay: 2,
     stagger: { amount: 0 },
     scrollTrigger: {
+        trigger: '.project-name_role',
         start: 'top bottom',
         end: 'bottom 10%',
         toggleActions: 'play none none reverse',
@@ -111,6 +114,7 @@ gsap.from(projectRole.chars, {
     delay: 2,
     stagger: { amount: 0 },
     scrollTrigger: {
+        trigger: '.project-name_role',
         start: 'top bottom',
         end: 'bottom 10%',
         toggleActions: 'play none none reverse',
