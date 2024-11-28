@@ -102,7 +102,24 @@
     text-align: justify;
 }
 
+/* Introduction Section */
+.introduction {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+    padding: 4rem 0;
+}
 
+.introduction-container {
+
+}
+
+.introduction-container p{
+    text-align: center;
+    font-family: var(--geist);
+}
+
+/* Featured Project Section */
 .featured-projects {
     margin: 0 1rem;
 }
@@ -203,6 +220,12 @@
     }
 
     .hero-content_bio p {
+        font-size: 1.5rem;
+    }
+    .introduction {
+        margin: 0 4rem;
+    }
+    .introduction-container p {
         font-size: 1.5rem;
     }
 
