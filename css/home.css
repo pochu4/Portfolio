@@ -268,6 +268,10 @@
         font-size: 1.25rem;
     }
 
+    .introduction-container {
+        width: 50%;
+    }
+
     .featured-projects {
         margin: 0 4rem;
     }
@@ -289,8 +293,6 @@
     }
 }
 
-@media (min-width: 1600px) {}
-
 @media (min-width: 1920px) {
 
     .hero-marquee {
@@ -309,6 +311,20 @@
 
     .hero-content_bio p {
         font-size: 1.25rem;
+    }
+
+    .introduction {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .introduction-container {
+        width: 50%;
+        padding: 5rem 0;
+    }
+
+    .introduction-container p {
+        font-size: 1.75rem;
     }
 
     .featured-projects {
