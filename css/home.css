@@ -320,11 +320,11 @@
 
     .introduction-container {
         width: 50%;
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
 
     .introduction-container p {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .featured-projects {
