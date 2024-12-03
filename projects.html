@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/projects.css">
 
-    <!-- Meta Tags ! -->
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Meta Tags! -->
     <meta name="description" content="Projects, created by Johann Chua, a digital designer based in Vancouver, BC">
     <meta name="author" content="Johann Chua">
     <meta name="keywords"
@@ -31,7 +34,8 @@
 
     <!-- OpenGraph Protocol Meta -->
     <meta property="og:title" content="Johann Chua">
-    <meta property="og:description" content="Projects, created by Johann Chua, a digital designer based in Vancouver, BC">
+    <meta property="og:description"
+        content="Projects, created by Johann Chua, a digital designer based in Vancouver, BC">
     <meta property="og:url" content="https://www.johannchua.com/">
     <meta property="og:image" content="https://www.johannchua.com/images/Submark.svg">
     <meta property="og:type" content="website">
@@ -39,7 +43,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Johann Chua">
-    <meta name="twitter:description" content="Projects, created by Johann Chua, a digital designer based in Vancouver, BC">
+    <meta name="twitter:description"
+        content="Projects, created by Johann Chua, a digital designer based in Vancouver, BC">
     <meta name="twitter:image" content="https://www.johannchua.com/images/Submark.svg">
     <meta name="twitter:url" content="https://www.johannchua.com/">
 
@@ -112,7 +117,7 @@
     <main>
 
         <div class="projects-header">
-            <h1>My <span class="h1-highlight">Projects</span></h1>
+            <h1 class="featured-header-ani">My <span class="h1-highlight">Projects</span></h1>
         </div>
 
         <div class="featured-projects projects-container">
@@ -195,7 +200,8 @@
 
         </div>
 
-        <div class="component contact contact-border">
+        <div class="component contact contact-border" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-out">
 
             <div class="component-header">
                 <h1>Let's Work <span class="h1-highlight">Together</span></h1>
@@ -303,6 +309,16 @@
     <!-- Image Reveal -->
     <script src="js/imageReveal.js"></script>
 
+    <!-- Text Reveal -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/textReveal.js"></script>
+
+
+    <!-- AOS CDN - Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -56,23 +56,6 @@ gsap.from(featuredProjHeader.chars, {
     },
 })
 
-const contactHeader = new SplitType('.contact-header-ani', { types: 'chars' })
-
-gsap.from(contactHeader.chars, {
-    opacity: 0,
-    x: 0,
-    duration: 1,
-    delay: 1,
-    stagger: { amount: 0.7 },
-    scrollTrigger: {
-        trigger: '.contact',
-        start: 'top bottom',
-        end: 'bottom 10%',
-        toggleActions: 'play none none reverse',
-    },
-})
-
-
 // Project Text Reveals 
 const projectDate = new SplitType('.project-date-ani', { types: 'chars' })
 
