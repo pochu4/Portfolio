@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
 
+    <!-- Animate on Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Meta Tags ! -->
     <meta name="description" content="More about Johann Chua, A passionate Digital Designer based in Vancouver, BC">
     <meta name="author" content="Johann Chua">
@@ -31,7 +34,8 @@
 
     <!-- OpenGraph Protocol Meta -->
     <meta property="og:title" content="Johann Chua">
-    <meta property="og:description" content="More about Johann Chua, A passionate Digital Designer based in Vancouver, BC">
+    <meta property="og:description"
+        content="More about Johann Chua, A passionate Digital Designer based in Vancouver, BC">
     <meta property="og:url" content="https://www.johannchua.com/">
     <meta property="og:image" content="https://www.johannchua.com/images/Submark.svg">
     <meta property="og:type" content="website">
@@ -39,7 +43,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Johann Chua">
-    <meta name="twitter:description" content="More about Johann Chua, A passionate Digital Designer based in Vancouver, BC">
+    <meta name="twitter:description"
+        content="More about Johann Chua, A passionate Digital Designer based in Vancouver, BC">
     <meta name="twitter:image" content="https://www.johannchua.com/images/Submark.svg">
     <meta name="twitter:url" content="https://www.johannchua.com/">
 
@@ -112,10 +117,11 @@
 
     <main>
         <section class="about-header">
-            <h1>About <span class="h1-highlight">Me</span></h1>
-            <div class="about-intro">
+            <h1 class="featured-header-ani">About <span class="h1-highlight">Me</span></h1>
+            <div class="about-intro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000" data-aos-easing="ease-in-out">
                 <div class="about-intro_img">
-                    <img src="./images/johann.jpg" alt="">
+                    <img src="./images/aboutpage/johann.jpg"
+                        alt="Johann Chua - Digital Designer based in Vancouver, BC">
                 </div>
                 <div class="about-intro_copy">
                     <h3>Hello! I'm Johann - a <span class="highlight">Digital Designer</span> based in Vancouver, BC.
@@ -158,10 +164,10 @@
             <div class="about-background_col">
                 <div class="title-images-wrapper">
                     <div class="title-images">
-                        <div class="title-img"><img src="./images/IMG_0499.jpg" alt="" /></div>
-                        <div class="title-img"><img src="./images/IMG_3222.jpg" alt="" /></div>
-                        <div class="title-img"><img src="./images/IMG_3394.jpg" alt="" /></div>
-                        <div class="title-img"><img src="./images/IMG_5380.jpg" alt="" /></div>
+                        <div class="title-img"><img src="./images/aboutpage/johann-before.jpg" alt="Johann Chua" /></div>
+                        <div class="title-img"><img src="./images/aboutpage/jpan.jpg" alt="Mount Fuji Photography by Johann Chua" /></div>
+                        <div class="title-img"><img src="./images/aboutpage/johann-now.jpg" alt="Johann Chua - Digital Designer based in Vancouver, BC" /></div>
+                        <div class="title-img"><img src="./images/aboutpage/golf.jpg" alt="Golfing!" /></div>
 
                     </div>
                 </div>
@@ -184,7 +190,7 @@
             </div>
         </section>
 
-        <div class="mini-cv">
+        <div class="mini-cv" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
             <div class="mini-cv_education">
                 <div class="mini-cv_education-title">
                     <h3 class="cv-title">Education</h3>
@@ -259,7 +265,7 @@
             </div>
         </div>
 
-        <div class="component contact contact-border">
+        <div class="component contact contact-border" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
 
             <div class="component-header">
                 <h1>Let's Work <span class="h1-highlight">Together</span></h1>
@@ -363,21 +369,22 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 
-
     <!-- Ionic Icon Library -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Loading Screen Script -->
-    <!-- <script src="js/loader.js"></script> -->
 
     <!-- Full Screened Menu Script using GSAP -->
     <script src="js/fsmenu.js"></script>
 
-    <!-- Hero Section Marquee -->
-    <!-- <script src="js/imageMarquee.js"></script> -->
+    <!-- Animate on Scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script type="module" src="js/about.js"></script>
+    <script src="js/textReveal.js"></script>
 </body>
 
 </html>

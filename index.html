@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/home.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Meta Tags ! -->
   <meta name="description" content="Johann Chua, A digital identity and product designer based in Vancouver, BC.">
@@ -145,7 +147,7 @@
 
     </div>
 
-    <div class="introduction">
+    <div class="introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
       <div class="introduction-container">
         <p>I aim to keep pushing creative boundaries and design work that’s not only visually appealing but also
           <span class="highlight">functional</span> and <span class="highlight">impactful.</span>
@@ -203,10 +205,10 @@
 
     </div>
 
-    <div class="component contact contact-border">
+    <div class="component contact contact-border" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
 
       <div class="component-header">
-        <h1 class="contact-header-ani">Let's Work <span class="h1-highlight">Together</span></h1>
+        <h1>Let's Work <span class="h1-highlight">Together</span></h1>
       </div>
 
       <div class="comp-container">
@@ -307,9 +309,6 @@
   <!-- Split Type by Luke Peavey -->
   <script src="https://unpkg.com/split-type"></script>
 
-  <!-- Loading Screen Script -->
-  <!-- <script src="js/loader.js"></script> -->
-
   <!-- Hero Section Marquee -->
   <script src="js/imageMarquee.js"></script>
 
@@ -321,6 +320,12 @@
 
   <!-- Text Reveal Animations -->
   <script src="js/textReveal.js"></script>
+
+  <!-- AOS CDN - Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

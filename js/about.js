@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const backgroundImg = document.querySelector(".title-images");
     const backgroundCopy = document.querySelector(".background-text p");
     const backgroundTitleHeight = 38;
-    const imgHeight = 250;
+    const imgHeight = 300;
 
     backgroundCopy.textContent = servicesCopy[0][0];
     let currentSplitText = new SplitType(backgroundCopy, { types: "lines" });
